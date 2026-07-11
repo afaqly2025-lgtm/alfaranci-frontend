@@ -1,7 +1,14 @@
 const loopbackHosts = new Set(['localhost', '127.0.0.1', '::1']);
 
+const normalizeApiUrl = (value) => {
+  const trimmed = String(value || '').trim();
+  if (!trimmed) return '';
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+};
+
 const getApiBaseUrl = () => {
-  const configuredUrl = import.meta.env.VITE_API_URL;
+  const configuredUrl = normalizeApiUrl(import.meta.env.VITE_API_URL);
   const browserHost = window.location.hostname;
 
   if (configuredUrl) {
