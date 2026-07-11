@@ -42,7 +42,7 @@ export default function LoginPage() {
   return (
     <div className="relative min-h-screen bg-[radial-gradient(circle_at_top_right,_rgba(37,99,235,0.22),_transparent_34%),radial-gradient(circle_at_bottom_left,_rgba(22,163,74,0.12),_transparent_28%),#f8fafc] px-4 py-8 dark:bg-slate-950">
       <div className="absolute right-4 top-4 z-10 rounded-2xl border border-blue-100 bg-white/90 px-4 py-2 text-right text-sm font-black text-primary shadow-soft backdrop-blur dark:border-blue-900/50 dark:bg-slate-950/80">
-        نظام تجريبي للفرنسي
+        نظام تجريبي فقط
       </div>
       <div className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-6xl overflow-hidden rounded-[2rem] border border-white/60 bg-white/85 shadow-soft backdrop-blur dark:border-slate-800 dark:bg-slate-950/80 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="hidden flex-col justify-between bg-gradient-to-br from-secondary via-slate-900 to-slate-800 p-10 text-white lg:flex">
