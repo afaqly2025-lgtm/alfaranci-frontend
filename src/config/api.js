@@ -17,6 +17,9 @@ const getApiBaseUrl = () => {
     if (loopbackHosts.has(url.hostname) && !loopbackHosts.has(browserHost)) {
       url.hostname = browserHost;
     }
+    if (!url.pathname || url.pathname === '/') {
+      url.pathname = '/api';
+    }
     return url.toString().replace(/\/$/, '');
   }
 
